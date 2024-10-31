@@ -1,22 +1,143 @@
 <!DOCTYPE html>
 <html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tarjetas Halloween</title>
     <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body{
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+      }
+
+      .container{
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+      }
+
+      .card {
+        position: relative;
+        /* display: inline-block; */
+        background-color: chocolate;
+        width: 300px;
+        height: 300px;
+        border-radius: 20px;
+        cursor: pointer;
+        /* overflow: hidden; */
+      }
+       
+      figure{
+
+        background-color: #fda03d;
+        border-radius: 20px;
+        width: 100%;
+        height: 100%;
+        transform-origin: 0 0;/*toma el punto desde la esquina*/
+        transition: all 822ms ease-in-out;
+        top: 0;
+        left: 0;
+    
+    }
+
+
+
+
+
+      /*todo cambiar por .card:hover*/
+      /*imortante lo de abajo , super*/
+     .card:hover figure{
+        position: absolute;
+        top: -10%;
+        left: -10%;
+        transform: scale(0.5);
+      }
+
+     
+
+      img{
+        width: 100%;
+      }
+
+
+
     </style>
-</head>
-<div class="container"></div>
+  </head>
 
-<body>
+  <body>
+    <div class="container">
+      <div class="card">
+        <figure>
+          <img src="images/bruja.png" alt="bruja" />
+        </figure>
 
-</body>
+        <div class="card__title">
+          <h2>Bruja</h2>
+        </div>
 
+        <div class="card__content">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt vitae
+            repudiandae aspernatur quae alias laudantium quas quidem consectetur
+            omnis dignissimos. Corporis accusantium expedita eius? Veritatis
+            tempora odio sunt dolore odit!
+          </p>
+        </div><!--card_content-->
+      </div><!--card-->
+
+
+
+      <div class="card">
+        <figure>
+          <img src="images/calabaza.png" alt="calabaza" />
+        </figure>
+
+        <div class="card__title">
+          <h2>Calabaza</h2>
+        </div>
+
+        <div class="card__content">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt vitae
+            repudiandae aspernatur quae alias laudantium quas quidem consectetur
+            omnis dignissimos. Corporis accusantium expedita eius? Veritatis
+            tempora odio sunt dolore odit!
+          </p>
+        </div><!--card_content-->
+      </div><!--card-->
+
+
+
+      <div class="card">
+        <figure>
+          <img src="images/fantasma.png" alt="fantasma" />
+        </figure>
+
+        <div class="card__title">
+          <h2>Fantasma</h2>
+        </div>
+
+        <div class="card__content">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt vitae
+            repudiandae aspernatur quae alias laudantium quas quidem consectetur
+            omnis dignissimos. Corporis accusantium expedita eius? Veritatis
+            tempora odio sunt dolore odit!
+          </p>
+        </div><!--card_content-->
+      </div><!--card-->
+      
+    </div><!--container-->
+    
+  </body>
 </html>
